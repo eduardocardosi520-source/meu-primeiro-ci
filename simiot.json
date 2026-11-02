@@ -1,0 +1,286 @@
+{
+  "artifacts": {},
+  "breadboard": {
+    "placements": {
+      "cmp_pgnd": {
+        "rotation": 0,
+        "x": 780,
+        "y": 140
+      },
+      "cmp_pin": {
+        "rotation": 0,
+        "x": 620,
+        "y": 20
+      },
+      "cmp_pout": {
+        "rotation": 0,
+        "x": 620,
+        "y": 140
+      },
+      "cmp_r1": {
+        "rotation": 0,
+        "x": 780,
+        "y": 20
+      },
+      "cmp_r2": {
+        "rotation": 0,
+        "x": 940,
+        "y": 20
+      }
+    },
+    "unit": "css-px",
+    "wires": {
+      "conn_gnd": {
+        "color": "black",
+        "points": []
+      },
+      "conn_in_r1": {
+        "color": "red",
+        "points": []
+      },
+      "conn_out": {
+        "color": "orange",
+        "points": []
+      },
+      "conn_r1_r2": {
+        "color": "orange",
+        "points": []
+      }
+    }
+  },
+  "components": [
+    {
+      "definitionId": "ic-pin",
+      "definitionVersion": 1,
+      "id": "cmp_pin",
+      "params": {
+        "name": "IN",
+        "number": 1
+      },
+      "refDes": "P1"
+    },
+    {
+      "definitionId": "resistor",
+      "definitionVersion": 1,
+      "id": "cmp_r1",
+      "params": {
+        "resistance": 10000
+      },
+      "refDes": "R1"
+    },
+    {
+      "definitionId": "resistor",
+      "definitionVersion": 1,
+      "id": "cmp_r2",
+      "params": {
+        "resistance": 10000
+      },
+      "refDes": "R2"
+    },
+    {
+      "definitionId": "ic-pin",
+      "definitionVersion": 1,
+      "id": "cmp_pout",
+      "params": {
+        "name": "OUT",
+        "number": 2
+      },
+      "refDes": "P2"
+    },
+    {
+      "definitionId": "ic-pin",
+      "definitionVersion": 1,
+      "id": "cmp_pgnd",
+      "params": {
+        "name": "GND",
+        "number": 3
+      },
+      "refDes": "P3"
+    }
+  ],
+  "connections": [
+    {
+      "a": {
+        "componentId": "cmp_pin",
+        "pinId": "P"
+      },
+      "b": {
+        "componentId": "cmp_r1",
+        "pinId": "1"
+      },
+      "id": "conn_in_r1",
+      "kind": "wire"
+    },
+    {
+      "a": {
+        "componentId": "cmp_r1",
+        "pinId": "2"
+      },
+      "b": {
+        "componentId": "cmp_r2",
+        "pinId": "1"
+      },
+      "id": "conn_r1_r2",
+      "kind": "wire"
+    },
+    {
+      "a": {
+        "componentId": "cmp_r2",
+        "pinId": "1"
+      },
+      "b": {
+        "componentId": "cmp_pout",
+        "pinId": "P"
+      },
+      "id": "conn_out",
+      "kind": "wire"
+    },
+    {
+      "a": {
+        "componentId": "cmp_r2",
+        "pinId": "2"
+      },
+      "b": {
+        "componentId": "cmp_pgnd",
+        "pinId": "P"
+      },
+      "id": "conn_gnd",
+      "kind": "wire"
+    }
+  ],
+  "createdAt": "2026-10-19T12:00:00.000Z",
+  "customParts": [],
+  "enclosure": null,
+  "firmware": {
+    "core": "arduino:avr@1.8.8",
+    "files": [
+      {
+        "path": "sketch.ino"
+      }
+    ],
+    "fqbn": "arduino:avr:uno",
+    "libraries": [],
+    "mainFile": "sketch.ino"
+  },
+  "id": "prj_6dbriae9hk63",
+  "pcb": {
+    "board": {
+      "height": 40,
+      "width": 50
+    },
+    "layers": 2,
+    "mountingHoles": [],
+    "origin": "board-center",
+    "outline": "custom",
+    "placements": {},
+    "routing": "auto",
+    "traces": [],
+    "unit": "mm",
+    "vias": []
+  },
+  "product": {
+    "analysis": {
+      "battery": {
+        "kind": "usb",
+        "mAh": 2000
+      },
+      "loadCases": [],
+      "resolutionTargetUm": 20,
+      "supports": [],
+      "thermal": {
+        "ambientC": 25,
+        "convection": 10
+      },
+      "tolerances": {}
+    },
+    "bodies": [],
+    "camera": null,
+    "detectors": [],
+    "emitters": [],
+    "focus": null,
+    "models": [],
+    "pcb": {
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "visible": true
+    },
+    "sample": null,
+    "unit": "mm",
+    "vision": {
+      "autofocus": {
+        "command": "F{angle}\n",
+        "max": 180,
+        "min": 0,
+        "step": 15
+      },
+      "focusMetric": "laplacian",
+      "measure": {
+        "invert": false,
+        "maxAreaUm2": 20000,
+        "minAreaUm2": 4,
+        "split": true,
+        "threshold": "otsu"
+      },
+      "model": null
+    }
+  },
+  "revision": 15,
+  "schemaVersion": 7,
+  "schematic": {
+    "placements": {
+      "cmp_pgnd": {
+        "rotation": 0,
+        "x": 6,
+        "y": 28
+      },
+      "cmp_pin": {
+        "rotation": 0,
+        "x": 6,
+        "y": 8
+      },
+      "cmp_pout": {
+        "rotation": 180,
+        "x": 30,
+        "y": 17
+      },
+      "cmp_r1": {
+        "rotation": 90,
+        "x": 18,
+        "y": 12
+      },
+      "cmp_r2": {
+        "rotation": 90,
+        "x": 18,
+        "y": 22
+      }
+    },
+    "unit": "grid",
+    "wires": {}
+  },
+  "simulation": {
+    "circuit": {
+      "scope": {
+        "channels": [],
+        "timePerDiv": 0.001,
+        "voltsPerDiv": 1
+      },
+      "speed": 1
+    },
+    "clockHz": 16000000,
+    "engine": "avr8js",
+    "engineVersion": "0.21.1",
+    "speed": 1
+  },
+  "title": "Meu primeiro CI",
+  "updatedAt": "2026-10-19T12:00:00.000Z"
+}
